@@ -1,0 +1,66 @@
+== 对开发语言的选择
+
+原生iOS项目主要就是在Objective-C和Swift之间做选择。Swift出现较晚，又有相当长一段时间语言变化很大，所以我觉得大部分国内的iOS开发者是对Objc更熟悉的。由于我希望对这个项目感兴趣的开发者能比较容易的读懂代码，所以选择了Objc。
+
+== 对架构的选择
+
+在一个项目中使用一个统一、合适的架构很重要。iOS常常使用MVC架构进行开发，但典型的MVC架构往往把过多的逻辑放到ViewController中，使得ViewController的代码很复杂，难以维护。所以后来出现了MVVM架构，即Model-View-ViewModel架构。
+
+典型的MVVM架构往往与ReactiveCocoa(RAC)这样的函数响应式框架共同使用。使用ReactiveCocoa这样的框架会促使开发者从流的角度来考虑问题。如果善用这样的框架会使得代码中事件流与数据流的处理逻辑很清晰，但是RAC这样的框架有很多开发者没有实际用过，也具有一定的学习门槛（主要是需要从流的角度考虑问题，涉及到思维方式的转变）。
+由于我希望对这个项目感兴趣的人能比较容易的读懂代码，所以我主要从职责分配的角度使用MVVM，而没有使用RAC。
+
+从职责分配的角度来使用MVVM的思路是这样的：
+
+*M还是原来的MVC的Model的职责；
+
+*把iOS中View和ViewControler一起作为V，负责展示；
+
+*加入一个ViewModel
+
+ViewModel主要负责两个事：1.把Model中的数据加工成适合View展示的数据，比如把Model中的时间戳转成某种时间格式的字符串。2.处理事件。比如点击一个按钮，发送一个网络请求，返回一个Model，然后跳转到另一个页面。这里把发送网络请求，返回一个Model的逻辑放到ViewModel中，而不是在像MVC那样放到ViewController中。
+
+通过这样的职责分配把一部分原来在ViewController中的逻辑放到了ViewModel中，使得各个组成部分的职责更清晰，由于ViewController负责的事情减少了，它的代码更容易维护。
+
+关于在iOS中使用MVVM，下面这篇文章有很好的说明。https://objccn.io/issue-13-1/
+
+== 在一个比较成熟的Bitcoin库的基础上开发
+
+CoreBitcoin是一个用Objc实现的Bitcoin库https://github.com/oleganza/CoreBitcoin (CoreBitcoin内部又使用了openssl）
+
+CoreBitcoin实现了BIP39、BIP44、比特币地址格式、对交易进行签名等功能。也有若干的实际项目使用它，已经比较成熟了。
+
+直接使用这种已经比较成熟的库与自己实现相比，不但更简单，而且也比较安全（自己重新实现一开始不可避免会有一些bug)，所以BasicBitcoinWallet直接在CoreBitcoin基础上进行开发。
+
+== 代码组织
+
+1.目录组织
+
+用XCode打开项目，你可以看到项目BasicBitcoinWallet目录下有Init、Main、Send、Receive、Balance、Others目录，这几个目录对应了“初始化”、“主界面”、“发送”、“接收”、“余额”、“其它”这些功能模块，每个模块目录下又有以该模块下各个页面名命名的目录，这些目录下包含了该页面的View、ViewController和ViewModel（有些页面很简单，就没有ViewModel)。如果你看过产品设计稿(参考#产品设计稿说明#)，你会发现这些模块、页面的组织与命名是与产品设计稿一一对应的。
+
+Model对大部分模块来说是共用的，所以一起放到了Model目录下。ViewHelper包含了与View有关的帮助类。Base目录包含了我自己实现的一些基础功能类和几个第三方类库，这个目录中的这些功能是项目无关的，也就是说如果我想开始另一个iOS项目，我可以把Base目录直接拷过去使用其提供的功能。
+
+2.代码说明
+
+页面目录下包含了该页面的View、ViewController和ViewModel。View、ViewController是用纯代码方式实现的，没有使用Xib或者Storyboard。会有同一个页面目录下有多个ViewModel的情况，这是因为有的功能在复用View、ViewController，用不同的ViewModel来实现差异。（我倾向于使用多态而不是
+if-else来实现差异)
+
+每个View和ViewController的实现代码的格式都类似，读懂一个页面就会很容易理解其它的。
+
+需要注意的有：
+
+*页面上面导航栏都没有使用系统的，而是自己实现的。
+
+*列表的自定义Cell都作为UIView的子类来实现，使用的时候加到UITableViewCell的contentView中，覆盖整个contentView。
+
+*列表所有的行都不分组，且都作为Cell实现。这包括了有的列表中间空白的地方和有的列表上面的第一条线（可以搜索EmptyWithSeparatorCell和TopLineCell来查看相关代码）。这样做的是为了用统一的逻辑来处理列表显示。
+
+另外在Init根目录下有几个不属于任何页面的类(InitFlow及其子类），下面说明它们的用途：
+
+Init初始化模块是用一系列页面作为初始化钱包的向导。初始化会根据用户的选择走不同的流程，
+
+包括创建新钱包、恢复已有钱包。虽然流程不一样，但会有共用页面的情况（另外重置PIN码也会复用初始化模块的几个页面）。也就是进入同一个页面时大部分页面显示和功能都一样，有少部分不一样（主要是跳转目标不一样，比如点同一个列表项接下来会根据所处的流程跳转到不同的页面）。
+
+要想实现页面复用，可以通过使用同一套View、ViewController，不同的ViewModel来实现。但在初始化模块中会造成以下的问题：这会使每个需要复用逻辑的页面都要为三个流程实现三个ViewModel子类，会使子类变得很多，查看逻辑时需要在多个类之间切换。
+
+目前的实现是把几个需要复用的页面中跳转目标不一样的地方抽象统一的接口(InitFlow类)，然后针对三个流程用三个子类来具体实现。这些类其实也就相当于专门负责返回跳转信息的ViewModel。
+这样就解决了上面说的子类过多的问题，使得同一个流程下的跳转逻辑更加集中。

@@ -1,0 +1,39 @@
+== 比特币相关
+
+1.Mastering Bitcoin (中文名《[#anchor]####精通比特币》)
+
+这是经常被推荐的一本书。目标读者主要是想学习比特币的技术人员，但前两章非技术人员也可以阅读。这本书内容组织得比较好，循序渐进、相对容易懂。内容又是开源免费的。
+
+英文版：https://github.com/bitcoinbook/bitcoinbook[__https://github.com/bitcoinbook/bitcoinbook__]
+
+___中文版：___https://github.com/BtcGroupCn/MasterBitcoin2ndCn[__https://github.com/BtcGroupCn/MasterBitcoin2ndCn__]
+
+2.《区块链 技术驱动金融》
+
+这本书写得相对比较早，有些比较新的内容没有涉及到。但讲的比较全面，不只包括技术相关内容，还包括比如比特币监管、比特币（区块链技术）作为一个平台可以有哪些应用等内容。对于想全面了解比特币来说是对前一本的有益补充。
+
+== [#anchor-1]####iOS安全相关
+
+1.《iOS应用安全权威指南》
+
+比较全面的讲解了iOS应用开发涉及到的一些安全问题。
+
+2.《黑客攻防技术宝典iOS实战篇》
+
+这本书更深入，内容虽然有点老，但对了解iOS安全机制以及黑客是如何发现、利用iOS漏洞的有很大帮助。如果之前对系统安全知识了解不多的话，这本书读起来会有点难，如果英文还可以的话建议阅读英文版，会更容易理解一些。
+
+3.《iOS应用逆向工程（第二版）》
+
+这本书可读性比较好，可以帮助了解基本的iOS逆向相关知识。
+
+== 参考项目
+
+在设计和实现的过程中参考了以下几个移动钱包。
+
+1.Mycelium Bitcoin Wallet
+
+2.Breadwallet
+
+3.Chance Bitcoin Wallet
+
+以上项目都可以从github上搜到
