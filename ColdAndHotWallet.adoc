@@ -24,7 +24,7 @@ BasicBitcoinWallet支持全功能模式和只读模式。在初始化钱包的�
 
 由于只读钱包不包含私钥，所以可以任意联网使用，不用担心丢失比特币。最坏的情况是暴露了扩展公钥，这种情况会导致暴漏交易信息，但不会导致比特币丢失。
 
-（注：这里也有一个安全隐患。如果暴露了扩展公钥的同时也暴露了任意一个地址对应的私钥，会导致所有私钥都暴露。但如果按着目前的冷热钱包使用场景，冷钱包不联网就不会暴露私钥，所以不会出现这种问题。关于这个问题的更多信息可以参考： https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc#hardened-child-key-derivation）
+（注：这里也有一个安全隐患。如果暴露了扩展公钥的同时也暴露了任意一个地址对应的私钥，会导致所有私钥都暴露。但如果按着目前的冷热钱包使用场景，冷钱包不联网就不会暴露私钥，所以不会出现这种问题。关于这个问题的更多信息可以参考： https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc#hardened-child-key-derivation ）
 
 这里热钱包是只读的，一开始说到只读钱包无法发送比特币，冷钱包是全功能的但又不能联网。那么用户如何发送比特币呢？
 
