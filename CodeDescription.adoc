@@ -11,25 +11,29 @@
 
 从职责分配的角度来使用MVVM的思路是这样的：
 
-*M还是原来的MVC的Model的职责；
+* M还是原来的MVC的Model的职责；
 
-*把iOS中View和ViewControler一起作为V，负责展示；
+* 把iOS中View和ViewControler一起作为V，负责展示；
 
-*加入一个ViewModel
+* 加入一个ViewModel
 
 ViewModel主要负责两个事：1.把Model中的数据加工成适合View展示的数据，比如把Model中的时间戳转成某种时间格式的字符串。2.处理事件。比如点击一个按钮，发送一个网络请求，返回一个Model，然后跳转到另一个页面。这里把发送网络请求，返回一个Model的逻辑放到ViewModel中，而不是在像MVC那样放到ViewController中。
 
 通过这样的职责分配把一部分原来在ViewController中的逻辑放到了ViewModel中，使得各个组成部分的职责更清晰，由于ViewController负责的事情减少了，它的代码更容易维护。
 
-关于在iOS中使用MVVM，下面这篇文章有很好的说明。https://objccn.io/issue-13-1/
+关于在iOS中使用MVVM，下面这篇文章有很好的说明。
+https://objccn.io/issue-13-1
 
 == 在一个比较成熟的Bitcoin库的基础上开发
 
-CoreBitcoin是一个用Objc实现的Bitcoin库https://github.com/oleganza/CoreBitcoin (CoreBitcoin内部又使用了openssl）
+https://github.com/oleganza/CoreBitcoin[CoreBitcoin]是一个用Objc实现的Bitcoin库（CoreBitcoin内部又使用了openssl）
 
 CoreBitcoin实现了BIP39、BIP44、比特币地址格式、对交易进行签名等功能。也有若干的实际项目使用它，已经比较成熟了。
 
 直接使用这种已经比较成熟的库与自己实现相比，不但更简单，而且也比较安全（自己重新实现一开始不可避免会有一些bug)，所以BasicBitcoinWallet直接在CoreBitcoin基础上进行开发。
+
+注：openssl/lib目录下的libcrypto-ios.a和libssl-ios.a是从openssl-1.0.1e.tar.gz构建出来的
+
 
 == 代码组织
 
@@ -48,11 +52,11 @@ if-else来实现差异)
 
 需要注意的有：
 
-*页面上面导航栏都没有使用系统的，而是自己实现的。
+* 页面上面导航栏都没有使用系统的，而是自己实现的。
 
-*列表的自定义Cell都作为UIView的子类来实现，使用的时候加到UITableViewCell的contentView中，覆盖整个contentView。
+* 列表的自定义Cell都作为UIView的子类来实现，使用的时候加到UITableViewCell的contentView中，覆盖整个contentView。
 
-*列表所有的行都不分组，且都作为Cell实现。这包括了有的列表中间空白的地方和有的列表上面的第一条线（可以搜索EmptyWithSeparatorCell和TopLineCell来查看相关代码）。这样做的是为了用统一的逻辑来处理列表显示。
+* 列表所有的行都不分组，且都作为Cell实现。这包括了有的列表中间空白的地方和有的列表上面的第一条线（可以搜索EmptyWithSeparatorCell和TopLineCell来查看相关代码）。这样做的是为了用统一的逻辑来处理列表显示。
 
 另外在Init根目录下有几个不属于任何页面的类(InitFlow及其子类），下面说明它们的用途：
 
