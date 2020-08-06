@@ -1,8 +1,9 @@
-== 对开发语言的选择
+== 代码说明
+=== 对开发语言的选择
 
 原生iOS项目主要就是在Objective-C和Swift之间做选择。Swift出现较晚，又有相当长一段时间语言变化很大，所以我觉得大部分国内的iOS开发者是对Objc更熟悉的。由于我希望对这个项目感兴趣的开发者能比较容易的读懂代码，所以选择了Objc。
 
-== 对架构的选择
+=== 对架构的选择
 
 在一个项目中使用一个统一、合适的架构很重要。iOS常常使用MVC架构进行开发，但典型的MVC架构往往把过多的逻辑放到ViewController中，使得ViewController的代码很复杂，难以维护。所以后来出现了MVVM架构，即Model-View-ViewModel架构。
 
@@ -24,7 +25,7 @@ ViewModel主要负责两个事：1.把Model中的数据加工成适合View展示
 关于在iOS中使用MVVM，下面这篇文章有很好的说明。
 https://objccn.io/issue-13-1
 
-== 在一个比较成熟的Bitcoin库的基础上开发
+=== 在一个比较成熟的Bitcoin库的基础上开发
 
 https://github.com/oleganza/CoreBitcoin[CoreBitcoin]是一个用Objc实现的Bitcoin库（CoreBitcoin内部又使用了openssl）
 
@@ -35,7 +36,7 @@ CoreBitcoin实现了BIP39、BIP44、比特币地址格式、对交易进行签�
 注：openssl/lib目录下的libcrypto-ios.a和libssl-ios.a是从openssl-1.0.1e.tar.gz构建出来的
 
 
-== 代码组织
+=== 代码组织
 
 1.目录组织
 
