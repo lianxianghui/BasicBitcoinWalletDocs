@@ -55,6 +55,6 @@ API服务的支持，这样可以同时解决稳定性和隐私的问题。
 
 关于更多比特币网络的相关知识，可以参考 https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch08.asciidoc
 和
-https://programmingblockchain.gitbook.io/programmingblockchain/wallet （这本网络教程虽然是用C#，但相关知识的通用的）
+https://programmingblockchain.gitbook.io/programmingblockchain/wallet （这里说明了比特币钱包的不同联网方式。这本网络教程虽然是用C#，但相关知识的通用的）
 
 
