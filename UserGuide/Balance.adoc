@@ -1,7 +1,7 @@
-余额是当前钱包所有UTXO（为花费交易输出）的总和。关于BasicBitconWallet中对UTXO的处理。可以参考:http://send.adoc/#let_user_know_utxo[让用户知道UTXO]
+余额是当前钱包所有UTXO（为花费交易输出）的总和。关于BasicBitconWallet中对UTXO的处理。可以参考:link:send.adoc/#let_user_know_utxo[让用户知道UTXO]
 
 在“余额（UTXOs)”页面，最上面会显示余额，下面是按着面额从大到小排序UTXO列表。注意这里有可能会有多个UTXO的地址是一样的（如果那支票做类比的话，这与可以给同一人签多张支票是类似的）。
 
 UTXO是一个交易输出，点击某一条UTXO可以进入“输出详情”页面查看一些详细内容。在“输出详情”页面也可以点击“所在交易”进一步查看该UTXO所在交易的信息。
 
-UTXO列表可以下拉刷新，当有人给钱包的地址发送比特币时，可以下拉刷新来查看是否已收到。*（为了实现简单，目前BasicBitconWallet未实现自动通知）*
+UTXO列表可以下拉刷新，当有人给钱包的地址发送比特币时，可以下拉刷新来查看是否已收到。（为了实现简单，目前BasicBitconWallet未实现自动通知）
