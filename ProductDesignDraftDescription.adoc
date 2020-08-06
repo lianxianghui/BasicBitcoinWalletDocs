@@ -8,16 +8,15 @@ Sketch本来是UI设计工具，但也可以用来做产品设计。BasicBitcoin
 
 如果没有Sketch的使用经验，也不要紧，只查看文件内容，操作是很简单的。
 
-[#anchor]####Sketch的安装包可以从https://www.sketch.com/下载最新版本。也可以从https://www.sketch.com/updates/
+Sketch的安装包可以从 https://www.sketch.com/ 下载最新版本。也可以从 https://www.sketch.com/updates/
 找到以往的版本。Sketch是收费软件，但可以免费试用30天。另外Sketch只提供macOS版本。
 
-如果过了30天试用期，或者想在Windows系统上查看Sketch设计稿，还有另外的选择。可以考虑使用Adobe公司的[#anchor-1]####[#anchor-2]####Adobe
-XD，Adobe XD可以打开Sketch格式的文件，目前是免费的，支持macOS和Windows。
+如果过了30天试用期，或者想在Windows系统上查看Sketch设计稿，还有另外的选择。可以考虑使用Adobe公司的Adobe XD，Adobe XD可以打开Sketch格式的文件，目前是免费的，支持macOS和Windows。
 
 === 简单说明
 
 下面以使用Sketch为例，对如何浏览设计稿做简单说明。
 
-打开文件之后，可以看到左上方有一个叫“Pages”的区域，在区域中是一个Page列表，有[#anchor-3]####Init、Main、Send、Receive、Balance、Others这些Page，这每个Page分别对应BasicBitcoinWallet的[#anchor-4]####初始化、主界面、发送、接收、余额、其它这些功能模块。
+打开文件之后，可以看到左上方有一个叫“Pages”的区域，在区域中是一个Page列表，有Init、Main、Send、Receive、Balance、Others这些Page，这每个Page分别对应BasicBitcoinWallet的初始化、主界面、发送、接收、余额、其它这些功能模块。
 
 点击某个Page进入该功能模块，可以看到该功能模块下的所有页面，以及页面跳转关系。另外还有一些指向某个页面的文本作为该页面的注释说明（文本的指向箭头借用了Sketch的Prototyping功能）。

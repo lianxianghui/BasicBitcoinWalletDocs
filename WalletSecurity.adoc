@@ -6,11 +6,11 @@
 
 比特币隐私泄漏主要涉及：用户钱包下的交易、余额等信息泄漏；同一用户的不同比特币地址之间的关联被发现；比特币地址与某人真实身份的关联被发现，等等。（比特币隐私是一个很大的话题，想了解更多比特币隐私的相关知识可以参考
 《区块链：技术驱动金融》第6章“比特币和匿名性”与Bitcoin
-Wiki中的Privacy页面https://en.bitcoin.it/wiki/Privacy）
+Wiki中的Privacy页面 https://en.bitcoin.it/wiki/Privacy ）
 
-== BasicBitcoinWallet的安全与隐私措施
+=== BasicBitcoinWallet的安全与隐私措施
 
-=== 一、在功能设计上的考虑
+==== 一、在功能设计上的考虑
 
 1.PIN码
 
@@ -37,16 +37,16 @@ Wiki中的Privacy页面https://en.bitcoin.it/wiki/Privacy）
 
 5.用户可以通过重置钱包来抹掉存储在手机上的密钥、缓存等数据。在用户更换手机前需要使用这个功能来保证这些数据不被其他人获得。（注意：直接删除App，不能保证这些数据会被系统自动删除。）
 
-6.可以通过使用一对[#anchor]####冷钱包与热钱包来达到安全性和便捷性的平衡。
+6.可以通过使用一对冷钱包与热钱包来达到安全性和便捷性的平衡。
 
-请参考：http://ColdAndHotWallet.adoc/[冷钱包与热钱包 ]
+请参考：link:ColdAndHotWallet.adoc[冷钱包与热钱包]
 
-=== 二、针对iOS系统的安全与隐私考虑
+==== 二、针对iOS系统的安全与隐私考虑
 
-请参考：http://iOSRelatedSecurity.adoc/[针对iOS系统采取的安全措施]
+请参考：link:iOSRelatedSecurity.adoc[针对iOS系统采取的安全措施]
 
-== BasicBitcoinWallet[#anchor-1]####网络实现方式与隐私的关系
+=== BasicBitcoinWallet网络实现方式与隐私的关系
 
-请参考：[#anchor-2]####http://NetworkConsiderations.adoc/[网络实现方式 ]
+请参考：link:NetworkConsiderations.adoc[网络实现方式 ]
 
 
