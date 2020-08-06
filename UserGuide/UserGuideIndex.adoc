@@ -1,27 +1,27 @@
-== 产品设计稿
+=== 产品设计稿
 
 在设计BasicBitcoinWallet的时候，我是使用Sketch来作为设计工具的。从产品原型到UI都是用这一个工具完成的。如果您想对BasicBitcoinWallet的功能有一个整体的了解，建议您先浏览一下该设计稿。
 
-（可以参考http://ProductDesignDraftDescription.adoc/[产品]http://ProductDesignDraftDescription.adoc/[设计稿说明]）
+（可以参考 link://ProductDesignDraftDescription.adoc/[产品设计稿说明]）
 
-== 功能说明
+=== 功能说明
 
 下面是对BasicBitcoinWallet功能的说明。会按着产品设计稿中的模块顺序来说明。
 
-=== http://init.adoc/[初始化向导（Init）]
+==== link:init.adoc[初始化向导(Init)]
 
-=== http://main.adoc/[主界面（Main）]
+==== link:main.adoc[主界面(Main)]
 
-=== http://send.adoc/[发送(Send)]
+==== link:send.adoc[发送(Send)]
 
-=== http://receive.adoc/[接收（Receive)]
+==== link:receive.adoc[接收(Receive)]
 
-=== http://balance.adoc/[余额（Ba]http://balance.adoc/[lance)]
+==== link:balance.adoc[余额(Balance)]
 
-=== http://others.adoc/[其它]http://others.adoc/[(Others)]
+==== link:others.adoc[其它(Others)]
 
 以下功能说明涉及到两个以上的功能模块，所以单独列出来：
 
-=== file:///Users/lian/Code/github/BasicMobileBitcoinWalletDocs/ColdAndHotWallet.adoc[冷热钱包使用方法]
+==== link:ColdAndHotWallet.adoc[冷热钱包使用方法]
 
 
