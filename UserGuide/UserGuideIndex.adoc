@@ -21,6 +21,6 @@
 
 以下功能说明涉及到两个以上的功能模块，所以单独列出来：
 
-==== link:ColdAndHotWallet.adoc[冷热钱包使用方法]
+==== link:../ColdAndHotWallet.adoc[冷热钱包使用方法]
 
 

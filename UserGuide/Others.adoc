@@ -17,7 +17,7 @@
 
 === 3.扫描二维码
 
-目前扫描二维码主要是与冷热钱包模式有关。可以参考link:ColdAndHotWallet.adoc[冷热钱包]来了解相关信息。
+目前扫描二维码主要是与冷热钱包模式有关。可以参考link:../ColdAndHotWallet.adoc[冷热钱包]来了解相关信息。
 
 === 4.设置
 
@@ -39,6 +39,6 @@
 
 账户扩展公钥显示当前账户的扩展公钥（如果是主网络钱包以xpub开头，如果是测试网络钱包以tpub开头）。扩展公钥可以用来初始化只读钱包。关于扩展公钥的知识可以参考: https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc#extended-keys
 
-重新搜索当前地址会搜索哪些地址使用过，关于这个功能可以参考钱包初始化的相关内容:link://init.adoc/#搜索地址并生成[搜索地址并生成]
+重新搜索当前地址会搜索哪些地址使用过，关于这个功能可以参考钱包初始化的相关内容:link:Init.adoc#搜索地址并生成[搜索地址并生成]
 
 
