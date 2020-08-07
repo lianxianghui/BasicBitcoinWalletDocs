@@ -1,6 +1,6 @@
 BasicBitcoinWallet是一个移动端比特币钱包。具有发送、接收比特币、查看余额、查看交易信息等基本的比特币钱包功能。
 
-== [#anchor]####BasicBitcoinWallet的特点
+=== BasicBitcoinWallet的特点
 
 在设计的时候，与许多比特币钱包重点考虑易用性而隐藏了很多钱包的内部细节不同，BasicBitcoinWallet会更多展示比特币钱包的内部细节。所以BasicBitcoinWallet更适合想更多了解比特币钱包内部细节的人来使用（比如想了解比特币相关知识的移动端开发人员）。
 
@@ -9,7 +9,7 @@ BasicBitcoinWallet是一个移动端比特币钱包。具有发送、接收比�
 还有很多钱包在发送比特币时，只允许用户输入接收地址和要发送的数量，钱包内部会按着一个选币算法选择使用哪些UTXO，如果需要找零，会自动生成一个找零输出。然后构造交易、签名并发送。这些都被隐藏到内部，用户可以不了解这些细节、也不能自己选择如何构造交易。BasicBitcoinWallet会允许用户自由选择一个或多个UTXO作为输入，也可以自己构建一个或多个输出，也允许用户自己决定这些输入、输出在将要构造的交易中的顺序。这样使用者可以更了解所构造交易的细节
 ，也具有很大的自由度来决定如何构造交易。
 
-== BasicBitcoinWallet的设计考虑
+=== BasicBitcoinWallet的设计考虑
 
 1.功能设计的时候尽量只关注比特币钱包的基本(Basic)核心功能。这也是为何称之为Basic
 Bitcoin Wallet的原因。
@@ -27,39 +27,40 @@ Bitcoin Wallet的原因。
 
 比特币是一种电子现金，安全性至关重要。BasicBitcoinWallet的私钥只保存在移动设备上，这就要求有保护安全和隐私的措施。
 
-== 功能特性
+=== 功能特性
 
-*符合BIP-44标准所定义的层次确定性钱包（但为了简化目前只使用账户0）
+* 符合BIP-44标准所定义的层次确定性钱包（但为了简化目前只使用账户0）
 
-*具备[#anchor-1]####BIP-39标准所定义的通过助记词来生成、恢复钱包根种子的功能
+* 具备BIP-39标准所定义的通过助记词来生成、恢复钱包根种子的功能
 
-*支持只读模式(watch only，也称为监控模式）
+* 支持只读模式(watch only，也称为监控模式）
 
-*支持冷热钱包模式，可以通过初始化一对冷热钱包来增强安全性（离线签名）
+* 支持冷热钱包模式(离线签名)，可以通过初始化一对冷热钱包来增强安全性
 
-*比特币密钥只被保存到用户的移动设备上，不会被上传到云端
+* 比特币密钥只被保存到用户的移动设备上，不会被上传到云端
 
-== 功能使用
+=== 功能使用
 
-具体功能使用请参考 #使用文档#
+具体功能使用请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/UserGuideIndex.adoc[使用文档]
 
-== 安全与隐私
+=== 安全与隐私
 
-[#anchor-2]####BasicBitcoinWallet对安全与隐私的考虑与实现请参考#安全与隐私#
+BasicBitcoinWallet对安全与隐私的考虑与实现请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/WalletSecurity.adoc[安全与隐私]
 
-== [#anchor-3]####代码说明
+=== 代码说明
 
-如果想了解项目代码，建议在读代码前先看一下#代码说明#
+如果想了解项目代码，建议在读代码前先看一下 https://github.com/lianxianghui/BasicBitcoinWalletDocs/CodeDescription.adoc[代码说明]
 
-== 产品设计稿
+=== 产品设计稿
 
-产品设计与UI设计是使用Sketch来完成的，可以通过#https://….#来获取该设计稿。
+产品设计与UI设计是使用Sketch来完成的，可以通过下载 https://github.com/lianxianghui/BasicBitcoinWalletDocs/basic_bitcoin_wallet.sketch 来查看该设计稿。
 
-设计稿说明请参考#产品设计稿说明#
+设计稿说明请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/ProductDesignDraftDescription.adoc[产品设计稿说明]
 
-== 参考项目
+=== 参考项目
 
-在设计和实现的过程中参考了以下项目：Mycelium Bitcoin
-Wallet，Breadwallet-ios， Chance Bitcoin
-Wallet。这几个项目都可以从github上搜到。
+在设计和实现的过程参考了以下比特币钱包项目，受到了这些项目的启发：
+
+https://github.com/mycelium-com/wallet-android[Mycelium Bitcoin Wallet]，
+https://github.com/breadwallet/breadwallet-ios[Breadwallet-ios]， https://github.com/zhiquan911/chance_btc_wallet[Chance Bitcoin Wallet]
 
