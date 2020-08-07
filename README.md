@@ -1,2 +1,0 @@
-# BasicBitcoinWalletDocs
-BasicBitcoinWallet的文档
