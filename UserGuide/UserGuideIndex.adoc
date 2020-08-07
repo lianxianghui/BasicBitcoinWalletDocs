@@ -7,17 +7,17 @@
 
 下面是对BasicBitcoinWallet功能的说明。会按着产品设计稿中的模块顺序来说明。
 
-==== link:init.adoc[初始化向导(Init)]
+==== link:Init.adoc[初始化向导(Init)]
 
-==== link:main.adoc[主界面(Main)]
+==== link:Main.adoc[主界面(Main)]
 
-==== link:send.adoc[发送(Send)]
+==== link:Send.adoc[发送(Send)]
 
-==== link:receive.adoc[接收(Receive)]
+==== link:Receive.adoc[接收(Receive)]
 
-==== link:balance.adoc[余额(Balance)]
+==== link:Balance.adoc[余额(Balance)]
 
-==== link:others.adoc[其它(Others)]
+==== link:Others.adoc[其它(Others)]
 
 以下功能说明涉及到两个以上的功能模块，所以单独列出来：
 
