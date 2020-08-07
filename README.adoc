@@ -45,7 +45,7 @@ Bitcoin Wallet的原因。
 
 === 安全与隐私
 
-BasicBitcoinWallet对安全与隐私的考虑与实现请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/blob/master/WalletSecurity.adoc[安全与隐私]
+BasicBitcoinWallet对安全与隐私的考虑请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/blob/master/WalletSecurity.adoc[安全与隐私]
 
 === 代码说明
 
@@ -63,4 +63,3 @@ BasicBitcoinWallet对安全与隐私的考虑与实现请参考 https://github.c
 
 https://github.com/mycelium-com/wallet-android[Mycelium Bitcoin Wallet]，
 https://github.com/breadwallet/breadwallet-ios[Breadwallet-ios]， https://github.com/zhiquan911/chance_btc_wallet[Chance Bitcoin Wallet]
-

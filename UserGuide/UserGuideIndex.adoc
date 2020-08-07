@@ -1,7 +1,6 @@
 === 产品设计稿
 
 在设计BasicBitcoinWallet的时候，是使用Sketch来作为设计工具的。从产品原型到UI都是用这一个工具完成的。如果想对BasicBitcoinWallet的功能有一个整体的了解，建议先浏览一下该设计稿。
-
 （可以参考 link:../ProductDesignDraftDescription.adoc[产品设计稿说明]）
 
 === 功能说明
