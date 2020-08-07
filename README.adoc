@@ -41,21 +41,21 @@ Bitcoin Wallet的原因。
 
 === 功能使用
 
-具体功能使用请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/UserGuideIndex.adoc[使用文档]
+具体功能使用请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/blob/master/UserGuide/UserGuideIndex.adoc[使用文档]
 
 === 安全与隐私
 
-BasicBitcoinWallet对安全与隐私的考虑与实现请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/WalletSecurity.adoc[安全与隐私]
+BasicBitcoinWallet对安全与隐私的考虑与实现请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/blob/master/WalletSecurity.adoc[安全与隐私]
 
 === 代码说明
 
-如果想了解项目代码，建议在读代码前先看一下 https://github.com/lianxianghui/BasicBitcoinWalletDocs/CodeDescription.adoc[代码说明]
+如果想了解项目代码，建议在读代码前先看一下 https://github.com/lianxianghui/BasicBitcoinWalletDocs/blob/master/CodeDescription.adoc[代码说明]
 
 === 产品设计稿
 
-产品设计与UI设计是使用Sketch来完成的，可以通过下载 https://github.com/lianxianghui/BasicBitcoinWalletDocs/basic_bitcoin_wallet.sketch 来查看该设计稿。
+产品设计与UI设计是使用Sketch来完成的，可以通过下载 https://github.com/lianxianghui/BasicBitcoinWalletDocs/blob/master/basic_bitcoin_wallet.sketch 来查看该设计稿。
 
-设计稿说明请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/ProductDesignDraftDescription.adoc[产品设计稿说明]
+设计稿说明请参考 https://github.com/lianxianghui/BasicBitcoinWalletDocs/blob/master/ProductDesignDraftDescription.adoc[产品设计稿说明]
 
 === 参考项目
 
