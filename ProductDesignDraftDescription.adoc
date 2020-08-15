@@ -1,7 +1,6 @@
 == 产品设计稿说明
 
 在文档根目录下的basic_bitcoin_wallet.sketch是Sketch格式的产品设计稿。
-
 Sketch本来是UI设计工具，但也可以用来做产品设计。BasicBitcoinWallet是使用Sketch来作为设计工具的，从产品原型到UI都是用这一个工具完成的。
 
 打开设计稿可以看到各个页面、页面之间的跳转逻辑，还可以看到功能模块的划分、以及对一些功能的注释等等。通过浏览设计稿可以对BasicBitcoinWallet的功能有一个整体的了解。
