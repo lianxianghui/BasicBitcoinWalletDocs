@@ -47,11 +47,9 @@ Web API可以是第三方提供的，也可以自己搭建（比如使用开源�
 
 === 目前采用的方式
 
-BasicBitcoinWallet为了实现起来简单，目前使用第三方Web
-API来实现。目前使用的是SmartBit提供的API，该API是公开免费的，而且目前看起来对访问频率没什么限制（有的第三方服务会对访问频率有限制，比如每分钟最多访问多少次）。
+BasicBitcoinWallet目前是使用Web API的方式，使用我搭的一个服务（目前只支持testnet)。服务的代码是一个开源项目，我在原来代码的基础上进行了少量修改（ https://github.com/lianxianghui/electrs ）。
 
-未来看情况有可能会：1.加入对其它第三方API的支持，这样当某个第三方不稳定时，可以随时切换。2.加入对自己搭建的Web
-API服务的支持，这样可以同时解决稳定性和隐私的问题。
+如果用户关注隐私性，也可以使用该代码自己搭服务，然后把BasicBitcoinWallet中访问Web Api的IP指向设为该服务的IP或域名。
 
 关于更多比特币网络的相关知识，可以参考 https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch08.asciidoc
 和
