@@ -1,7 +1,7 @@
-== 产品设计稿说明
+== 设计稿说明
 
-在文档根目录下的basic_bitcoin_wallet.sketch是Sketch格式的产品设计稿。
-Sketch本来是UI设计工具，但也可以用来做产品设计。BasicBitcoinWallet是使用Sketch来作为设计工具的，从产品原型到UI都是用这一个工具完成的。
+在文档根目录下的basic_bitcoin_wallet.sketch是Sketch格式的设计稿。
+Sketch本来是UI设计工具，但也可以用来做原型设计。BasicBitcoinWallet是使用Sketch来作为设计工具的，原型、UI都是用这一个工具完成的。
 
 打开设计稿可以看到各个页面、页面之间的跳转逻辑，还可以看到功能模块的划分、以及对一些功能的注释等等。通过浏览设计稿可以对BasicBitcoinWallet的功能有一个整体的了解。
 
@@ -13,6 +13,6 @@ Sketch的安装包可以从 https://www.sketch.com/ 下载最新版本。也可�
 
 下面以使用Sketch为例，对如何浏览设计稿做简单说明。
 
-打开文件之后，可以看到左上方有一个叫“Pages”的区域，在区域中是一个Page列表，有Init、Main、Send、Receive、Balance、Others这些Page，这每个Page分别对应BasicBitcoinWallet的初始化、主界面、发送、接收、余额、其它这些功能模块。
+打开文件之后，可以看到左上方有一个叫“图层”的区域(老版本Sketch叫Pages)，在区域中是一个列表，有Init、Main、Send、Receive、Balance、Others这些Page，这每个Page分别对应BasicBitcoinWallet的初始化、主界面、发送、接收、余额、其它这些功能模块。
 
 点击某个Page进入该功能模块，可以看到该功能模块下的所有页面，以及页面跳转关系。另外还有一些指向某个页面的文本作为该页面的注释说明（文本的指向箭头借用了Sketch的Prototyping功能）。
