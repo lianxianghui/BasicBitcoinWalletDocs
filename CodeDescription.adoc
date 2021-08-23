@@ -24,7 +24,7 @@ ViewModel主要负责两个事：
 
 2.处理事件
 
-比如点击一个按钮需要处理以下逻辑：1）触发一个网络请求 2）从网络返回数据后生成一个Model 3）把Model里的数据显示出来。这里把发送网络请求，返回一个Model的逻辑放到ViewModel中，而不是在像MVC那样放到ViewController中。
+比如点击一个按钮需要处理以下逻辑：1）触发一个网络请求； 2）从网络返回数据后生成一个Model； 3）把Model里的数据显示出来。这里把发送网络请求，返回一个Model的逻辑放到ViewModel中，而不是在像MVC那样放到ViewController中。
 
 通过这样的职责分配把一部分原来在ViewController中的逻辑放到了ViewModel中，使得各个组成部分的职责更清晰，由于ViewController负责的事情减少了，它的代码更容易维护。
 
