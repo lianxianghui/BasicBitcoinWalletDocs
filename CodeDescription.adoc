@@ -18,7 +18,13 @@
 
 * 加入一个ViewModel
 
-ViewModel主要负责两个事：1.把Model中的数据加工成适合View展示的数据，比如把Model中的时间戳转成某种时间格式的字符串。2.处理事件。比如点击一个按钮，发送一个网络请求，返回一个Model，然后跳转到另一个页面。这里把发送网络请求，返回一个Model的逻辑放到ViewModel中，而不是在像MVC那样放到ViewController中。
+ViewModel主要负责两个事：
+
+1.把Model中的数据加工成适合View展示的数据。比如把Model中的时间戳转成某种时间格式的字符串。
+
+2.处理事件
+
+比如点击一个按钮需要处理以下逻辑：1）触发一个网络请求 2）从网络返回数据后生成一个Model 3）把Model里的数据显示出来。这里把发送网络请求，返回一个Model的逻辑放到ViewModel中，而不是在像MVC那样放到ViewController中。
 
 通过这样的职责分配把一部分原来在ViewController中的逻辑放到了ViewModel中，使得各个组成部分的职责更清晰，由于ViewController负责的事情减少了，它的代码更容易维护。
 
@@ -40,7 +46,7 @@ CoreBitcoin实现了BIP39、BIP44、比特币地址格式、对交易进行签�
 
 1.目录组织
 
-用XCode打开项目，你可以看到项目BasicBitcoinWallet目录下有Init、Main、Send、Receive、Balance、Others目录，这几个目录对应了“初始化”、“主界面”、“发送”、“接收”、“余额”、“其它”这些功能模块，每个模块目录下又有以该模块下各个页面名命名的目录，这些目录下包含了该页面的View、ViewController和ViewModel（有些页面很简单，就没有ViewModel)。如果你看过产品设计稿(参考#产品设计稿说明#)，你会发现这些模块、页面的组织与命名是与产品设计稿一一对应的。
+用XCode打开项目，你可以看到项目BasicBitcoinWallet目录下有Init、Main、Send、Receive、Balance、Others目录，这几个目录对应了“初始化”、“主界面”、“发送”、“接收”、“余额”、“其它”这些功能模块，每个模块目录下又有以该模块下各个页面名命名的目录，这些目录下包含了该页面的View、ViewController和ViewModel（有些页面很简单，就没有ViewModel)。如果你看过产品设计稿(参考： https://github.com/lianxianghui/BasicBitcoinWalletDocs/blob/master/ProductDesignDraftDescription.adoc[产品设计稿说明])，你会发现这些模块、页面的组织与命名是与产品设计稿一一对应的。
 
 Model对大部分模块来说是共用的，所以一起放到了Model目录下。ViewHelper包含了与View有关的帮助类。Base目录包含了我自己实现的一些基础功能类和几个第三方类库，这个目录中的这些功能是项目无关的，也就是说如果我想开始另一个iOS项目，我可以把Base目录直接拷过去使用其提供的功能。
 
